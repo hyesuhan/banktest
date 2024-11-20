@@ -67,7 +67,7 @@ public class SecurityConfig {
         http.httpBasic(AbstractHttpConfigurer::disable);
 
         // 필터 적용
-        http.with(new CustomSecurityFilterManager(), c-> c.getClass());
+        http.with(new CustomSecurityFilterManager(), c -> c.getClass());
 
         // 인증 실패
         http.exceptionHandling((exceptionConfig) ->
